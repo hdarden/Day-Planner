@@ -37,10 +37,10 @@ $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 
 
-function updateHour (){
+
 
     $('.time-block').each(function() {
-        //
+        //taking the string and turning it into an integer for current hour. spliting the -number off of string.
         var blockHour = parseInt($(this).attr('id').split('-')[1])
 
          // If this block's hour is less than the current hour:
@@ -59,6 +59,3 @@ function updateHour (){
             
         } 
       })
-
-    }
-    updateHour();
