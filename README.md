@@ -6,3 +6,4 @@ Using JQuery and html I created a day planner to keep track of a to do list for 
 # Link
 https://hdarden.github.io/Day-Planner/
 
+<img width="936" alt="Screen Shot 2020-05-09 at 8 13 20 PM" src="https://user-images.githubusercontent.com/63661120/81488060-03eb6500-9232-11ea-8406-898f662937f7.png">
