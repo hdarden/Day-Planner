@@ -1,3 +1,4 @@
+
 // exp: Fri Oct 25 2019 17:40:56 GMT-0400 (Eastern Daylight Time)
 var currentDateAndTime = Date(Date.now());
 //Current hour in military time
@@ -37,25 +38,25 @@ $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 
 
+function colorUpdater () {
 
-
-    $('.time-block').each(function() {
+    $(".time-block").each(function() {
         //taking the string and turning it into an integer for current hour. spliting the -number off of string.
         var blockHour = parseInt($(this).attr('id').split('-')[1])
-
+        
          // If this block's hour is less than the current hour:
-        if ($(this.blockHour < currentHour)) {
+        if (blockHour < currentHour) {
             $(this).addClass('past');
             
-        }else if ($(this.blockHour > currentHour)){
-            $(this).removeClass("past");
-            $(this).addClass("future");
-            
-        }else {
-            
-            $(this).removeClass("future");
+        } else if (blockHour === currentHour){
             $(this).removeClass("past");
             $(this).addClass("present");
             
+        } else {
+            $(this).addClass("future");
+            
         } 
-      })
+    })
+}
+colorUpdater();
+setInterval(colorUpdater,60000);
